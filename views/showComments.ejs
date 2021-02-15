@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="\home_page_styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Truculenta&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <ul>
+        <% for(var i=0;i<comments.length;i++){ %>
+              <li id="comment">
+                  <ul id="inside">
+                      <li>
+                          Name: <%= comments[i].name %> 
+                      </li>
+                      <li>
+                          Comment: <%= comments[i].line %> --> <a id="go_to_comment" style="color: white;" href="/comments/<%= comments[i].id %> "> Go to Comment</a>
+                      </li>
+                  </ul>
+              </li>
+        <% } %> 
+    </ul>
+   <button id="new_comment"> <a href="/comments/new">New comment</a></button>
+</body>
+</html>

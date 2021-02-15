@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit form by ID</title>
+    <link rel="stylesheet" href="\form_page_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Truculenta&display=swap" rel="stylesheet">
+    <style>
+        button{
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 15px;
+            outline: none;
+            background-color:white;
+            color: #5390d9;
+            border: none;
+            font-family: "Roboto", sans-serif;
+            font-family: "Truculenta", sans-serif;
+            font-weight: 800;
+            word-spacing: 2px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/comments/<%= id %>?_method=PATCH" method="POST">
+            <label for="comment">New Comment: </label>
+            <textarea placeholder="Comment here..." rows="10" cols="50" id="comment" name="newComment" required></textarea>
+            <button>Submit</button>
+        </form>
+    </div>
+</body> 
+</html>
